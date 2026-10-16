@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#ffffff" />
+<title>indeed</title>
+<style>
+:root{--blue:#2557a7;--navy:#12233f;--ink:#202124;--muted:#6b6b6b;--line:#e5e7eb;--cream:#f9f6f0;--gold:#d8c39c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}button{font:inherit;cursor:pointer}.browser-strip{height:42px;display:flex;align-items:center;padding:0 16px;color:#1764c0;font-size:14px;border-bottom:1px solid #eee;background:#fff}.browser-strip span{margin-left:7px}.site-header{height:62px;display:flex;align-items:center;gap:16px;padding:0 16px;border-bottom:1px solid #e8e8e8;background:white}.logo{font-size:28px;font-weight:750;letter-spacing:-1.6px;color:#173e78;margin-right:auto}.logo .dot{color:#2557a7}.sign-in{color:var(--blue);font-size:14px;text-decoration:none;white-space:nowrap}.open-app{border:0;border-radius:999px;background:var(--blue);color:white;font-weight:650;padding:10px 15px;font-size:13px;white-space:nowrap}.hamburger{width:26px;height:26px;display:flex;flex-direction:column;justify-content:center;gap:5px;border:0;background:none;padding:2px}.hamburger i{height:2px;width:22px;background:#222;display:block;border-radius:2px}.job-intro{background:#f7f7f7;padding:25px 20px 24px}.job-intro h1{font-size:24px;line-height:1.18;margin:0 0 9px;font-weight:750;letter-spacing:-.4px}.job-intro p{font-size:15px;color:#666;margin:0;line-height:1.45}.section{padding:23px 20px}.section h2{font-size:20px;line-height:1.25;margin:0 0 19px;font-weight:750;letter-spacing:-.25px}.detail{display:flex;align-items:center;gap:15px;margin:0 0 19px;font-size:15px;font-weight:650}.detail:last-child{margin-bottom:0}.detail svg{width:23px;height:23px;flex:none;stroke:#202124;stroke-width:1.8;fill:none}.rule{height:1px;background:var(--line);margin:0 20px}.description{font-size:15px;line-height:1.55;margin:0;color:#333}.description .subhead{display:block;margin-top:14px;font-weight:650}.bullets{color:#686868;margin:7px 0 0;padding-left:21px}.bullets li{padding-left:1px}.show-more{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:21px 0 4px;border:0;background:transparent;color:#3d3d3d;font-size:15px;font-weight:700}.chevron{color:var(--blue);font-size:22px;line-height:12px;transition:transform .25s}.show-more[aria-expanded="true"] .chevron{transform:rotate(180deg)}.hidden-copy{display:none}.hidden-copy.open{display:block}.apply{padding:21px 20px 30px}.disclaimer{font-size:12px;line-height:1.4;color:#777;margin:0 0 15px}.apply-button{width:100%;border:0;border-radius:8px;background:#2557a7;color:white;font-size:16px;font-weight:700;padding:16px 12px;box-shadow:0 1px 2px #0001}.apply-button:active{transform:scale(.99)}.browser-toolbar{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;background:#292929;color:#fff;border-radius:30px;padding:7px 9px;box-shadow:0 5px 22px #0004;z-index:5;max-width:calc(100% - 24px);font-size:12px}.tool-icon{border:0;background:transparent;color:#fff;min-width:30px;height:30px;display:grid;place-items:center;font-size:20px;padding:0}.translation{display:flex;align-items:center;gap:6px;border:0;border-radius:18px;background:#454545;color:#fff;padding:8px 12px;font-size:12px;white-space:nowrap}.translation .translate-icon{font-size:15px}.toolbar-spacer{display:none}
+/* Birthday reveal */
+#birthday{display:none;min-height:100vh;background:var(--cream);color:var(--navy)}#birthday.visible{display:block;animation:fadeIn .7s ease both}.hero{background:#0d1b33;color:#f8f5ef;padding:22px 18px 30px;text-align:center;min-height:49vh;display:flex;flex-direction:column;align-items:center;justify-content:center}.flower-art{width:100%;max-width:520px;height:210px;border-radius:18px;overflow:hidden;background:#101019;margin:0 auto 24px;display:block}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:2.4px;font-weight:500;margin:0 0 14px}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,8vw,47px);line-height:1.05;letter-spacing:-.8px;font-weight:500;margin:0 0 12px}.hero-sub{font-family:Georgia,"Times New Roman",serif;font-size:17px;color:#e7e5e1;margin:0}.sparkle{color:var(--gold);font-size:22px;margin-top:19px}.letter{max-width:650px;margin:0 auto;padding:36px 24px 110px;text-align:center}.letter h2{font-family:Georgia,"Times New Roman",serif;font-size:25px;line-height:1.25;margin:0 0 17px;color:#172944;font-weight:600}.letter p{font-size:16px;line-height:1.9;margin:0;color:#344158}.letter .arabic{direction:rtl;font-size:17px;line-height:2.05}.letter-divider{height:1px;background:#ded9d0;margin:29px 0}.signature{font-family:Georgia,"Times New Roman",serif;font-size:19px;font-weight:600;margin-top:30px!important;color:#172944!important}.birthday-back{margin-top:24px;border:1px solid #b9c0ca;background:transparent;color:#223b60;border-radius:999px;padding:10px 17px;font-size:13px}.toast{position:fixed;top:12px;left:50%;transform:translateX(-50%);background:#fff;color:#333;padding:10px 15px;border-radius:9px;box-shadow:0 4px 18px #0002;font-size:13px;display:none;z-index:10}.toast.show{display:block;animation:fadeIn .2s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@media(min-width:700px){.page-wrap{max-width:760px;margin:0 auto;border-left:1px solid #eee;border-right:1px solid #eee}.job-intro,.section,.apply{padding-left:28px;padding-right:28px}.rule{margin-left:28px;margin-right:28px}.hero{padding-top:34px}.flower-art{height:260px}.letter{padding-top:48px}}@media(max-width:370px){.site-header{gap:10px;padding:0 12px}.logo{font-size:25px}.open-app{padding:9px 11px}.job-intro h1{font-size:22px}.translation{padding:8px 9px}}
+</style>
+</head>
+<body>
+<div id="jobPage">
+  <div class="page-wrap">
+    <header class="site-header">
+      <div class="logo" aria-label="Indeed inspired design">indeed<span class="dot">.</span></div>
+      <a class="sign-in" href="#" onclick="showToast('dak chi li b9a ti shofi show more')">Sign in</a>
+      <button class="open-app" type="button" onclick="showToast('a7m a7m. shofi show more wach khdama')">Open app</button>
+      <button class="hamburger" aria-label="Menu" type="button" onclick="showToast('t9ta3 do — warki ela show more.')"><i></i><i></i><i></i></button>
+    </header>
+    <section class="job-intro">
+      <h1>Pharmaciens industriel / grossisterie</h1>
+      <p>distribution et industrie pharmaceutique</p>
+    </section>
+    <section class="section">
+      <h2>Job details</h2>
+      <div class="detail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10h19M7 6V4.5h10V6M7 14h3"/></svg><span>Pay information not provided</span></div>
+      <div class="detail"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l4 2.5"/></svg><span>Permanent</span></div>
+      <div class="detail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Maroc</span></div>
+    </section>
+    <div class="rule"></div>
+    <section class="section">
+      <h2>Full job description</h2>
+      <p class="description">Groupe Leader dans la Grande Distribution et l'Industrie Pharmaceutique, dans le cadre de notre développement, nous recrutons des pharmaciens confirmés / juniors pour rejoindre nos équipes sur différents pôles:<span class="subhead">1. Pôle Industrie Pharmaceutique</span></p>
+      <ul class="bullets"><li>Postes disponibles: Pharmaciens industriels, grossisterie et distribution...</li></ul>
+      <div class="hidden-copy" id="moreCopy">
+        <p class="description" style="margin-top:12px">Profil recherché: sérieux, sens de l'organisation et envie de contribuer à une équipe dynamique. Une belle opportunité pour une personne exceptionnelle qui mérite une journée tout aussi exceptionnelle.</p>
+        <p class="description" style="margin-top:12px"><strong>Avantage spécial:</strong> une surprise confidentielle réservée à la candidate du jour.</p>
+      </div>
+      <button class="show-more" id="showMore" aria-expanded="false" type="button"><span id="showMoreText">Show more</span><span class="chevron" aria-hidden="true">⌄</span></button>
+    </section>
+    <div class="rule"></div>
+    <section class="apply">
+      <p class="disclaimer">You must create an Indeed account before continuing to the company website to apply</p>
+      <button class="apply-button" type="button" onclick="revealBirthday()">Apply on company site</button>
+    </section>
+  </div>
+  </div>
+<div id="birthday" aria-live="polite">
+  <section class="hero">
+    <svg class="flower-art" viewBox="0 0 700 330" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Elegant blue and white flowers on a navy background">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080b13"/><stop offset=".55" stop-color="#17233a"/><stop offset="1" stop-color="#080d18"/></linearGradient>
+        <radialGradient id="bluePetal"><stop stop-color="#dce9f4"/><stop offset=".45" stop-color="#7599c6"/><stop offset="1" stop-color="#385782"/></radialGradient>
+        <radialGradient id="whitePetal"><stop stop-color="#fffdf6"/><stop offset="1" stop-color="#c8c9c7"/></radialGradient>
+        <filter id="soft"><feGaussianBlur stdDeviation="1.3"/></filter>
+      </defs>
+      <rect width="700" height="330" fill="url(#bg)"/>
+      <path d="M0 0 Q130 40 100 170 T210 330 L0 330Z" fill="#e9e6e2" opacity=".16"/><path d="M20 0 Q145 80 105 180 T195 330" fill="none" stroke="#fff" stroke-width="17" opacity=".14"/>
+      <g stroke="#687d70" stroke-width="4" fill="none"><path d="M495 340Q465 220 515 75"/><path d="M530 340Q535 210 600 100"/><path d="M475 330Q420 220 430 150"/><path d="M565 330Q600 220 630 180"/></g>
+      <g fill="#708a79" opacity=".9"><ellipse cx="478" cy="224" rx="38" ry="13" transform="rotate(34 478 224)"/><ellipse cx="518" cy="178" rx="38" ry="12" transform="rotate(-35 518 178)"/><ellipse cx="455" cy="274" rx="39" ry="13" transform="rotate(35 455 274)"/><ellipse cx="575" cy="240" rx="42" ry="12" transform="rotate(-35 575 240)"/><ellipse cx="594" cy="150" rx="34" ry="12" transform="rotate(-45 594 150)"/><ellipse cx="432" cy="194" rx="32" ry="11" transform="rotate(25 432 194)"/></g>
+      <g id="hydrangea" fill="url(#bluePetal)" stroke="#d5e2f0" stroke-opacity=".3" stroke-width="1">
+        <g transform="translate(520 116)"><circle r="29" cy="-25"/><circle r="29" cx="24" cy="-9"/><circle r="29" cx="18" cy="20"/><circle r="29" cx="-13" cy="25"/><circle r="29" cx="-28" cy="0"/><circle r="29" cx="-8" cy="-12"/><circle r="29" cx="10" cy="-4"/></g>
+        <g transform="translate(610 203) scale(.85)"><circle r="28" cy="-25"/><circle r="28" cx="24" cy="-9"/><circle r="28" cx="18" cy="20"/><circle r="28" cx="-13" cy="25"/><circle r="28" cx="-28" cy="0"/><circle r="28" cx="-8" cy="-12"/><circle r="28" cx="10" cy="-4"/></g>
+        <g transform="translate(448 178) scale(.68)"><circle r="28" cy="-25"/><circle r="28" cx="24" cy="-9"/><circle r="28" cx="18" cy="20"/><circle r="28" cx="-13" cy="25"/><circle r="28" cx="-28" cy="0"/><circle r="28" cx="-8" cy="-12"/><circle r="28" cx="10" cy="-4"/></g>
+      </g>
+      <g fill="url(#whitePetal)" stroke="#fffdf7" stroke-opacity=".5" stroke-width="1">
+        <g transform="translate(555 265)"><ellipse rx="15" ry="25" cy="-15"/><ellipse rx="15" ry="25" cx="15" cy="-7" transform="rotate(45 15 -7)"/><ellipse rx="15" ry="25" cx="15" cy="12" transform="rotate(90 15 12)"/><ellipse rx="15" ry="25" cx="-10" cy="15" transform="rotate(-35 -10 15)"/><ellipse rx="15" ry="25" cx="-20" cy="-4" transform="rotate(-65 -20 -4)"/><circle r="10" fill="#d5c7a7"/></g>
+        <g transform="translate(652 265) scale(.62)"><ellipse rx="15" ry="25" cy="-15"/><ellipse rx="15" ry="25" cx="15" cy="-7" transform="rotate(45 15 -7)"/><ellipse rx="15" ry="25" cx="15" cy="12" transform="rotate(90 15 12)"/><ellipse rx="15" ry="25" cx="-10" cy="15" transform="rotate(-35 -10 15)"/><ellipse rx="15" ry="25" cx="-20" cy="-4" transform="rotate(-65 -20 -4)"/><circle r="10" fill="#d5c7a7"/></g>
+      </g>
+      <g fill="#f5e9cb" opacity=".8"><circle cx="340" cy="45" r="1.5"/><circle cx="380" cy="90" r="1"/><circle cx="295" cy="240" r="1.5"/><circle cx="390" cy="285" r="1"/><path d="M358 145l3 8 8 3-8 3-3 8-3-8-8-3 8-3Z"/></g>
+      <rect x="1" y="1" width="698" height="328" rx="18" fill="none" stroke="#ffffff" stroke-opacity=".12"/>
+    </svg>
+    <p class="eyebrow">OCTOBER 16 · A SPECIAL DAY</p>
+    <h1>For You, <b>Hind</b></h1>
+    <p class="hero-sub">A little place made just for you</p>
+    <div class="sparkle" aria-hidden="true">✧</div>
+  </section>
+  <section class="letter">
+    <h2>A Prayer for Your Year Ahead</h2>
+    <p class="arabic">اللهم اجعل عامها الجديد مليئًا بالخير والبركة، وارزقها راحة القلب ( و ارزقني المال )، وطمأنينة الروح، وحقق لها ما تتمنى إن كان فيه خير لها ( ولي )  .</p>
+    <div class="letter-divider"></div>
+    <h2>Little Things That Make You Special</h2>
+    <p class="arabic">إلى أختي الغالية ( منين )، أتمنى لكِ أيامًا جميلة تشبه قلبك 😃، وأبواب خير تُفتح لكِ من حيث لا تحتسبين، وسكينة ترافقكِ أينما كنتِ. كل عام وأنتِ بخير.</p>
+    <p class="signature">With love, Oussama center of universe.</p>
+  </section>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const moreButton=document.getElementById('showMore');
+const moreCopy=document.getElementById('moreCopy');
+moreButton.addEventListener('click',()=>{
+  const expanded=moreButton.getAttribute('aria-expanded')==='true';
+  if(!expanded){
+    moreCopy.classList.add('open');
+    moreButton.setAttribute('aria-expanded','true');
+    document.getElementById('showMoreText').textContent='Show less';
+    moreButton.querySelector('.chevron').textContent='⌃';
+    setTimeout(()=>revealBirthday(),900);
+  }else{
+    moreCopy.classList.remove('open');moreButton.setAttribute('aria-expanded','false');
+    document.getElementById('showMoreText').textContent='Show more';moreButton.querySelector('.chevron').textContent='⌄';
+  }
+});
+function revealBirthday(){
+  document.getElementById('jobPage').style.display='none';
+  document.getElementById('birthday').classList.add('visible');
+  window.scrollTo({top:0,behavior:'instant'});
+  document.title='For You, Always';
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#0d1b33');
+}
+function backToOffer(){
+  document.getElementById('birthday').classList.remove('visible');
+  document.getElementById('jobPage').style.display='block';
+  window.scrollTo({top:0,behavior:'instant'});document.title='Job details';
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#ffffff');
+}
+let toastTimer;function showToast(message){const t=document.getElementById('toast');t.textContent=message;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2200)}
+async function copyPageLink(){try{await navigator.clipboard.writeText(location.href);showToast('Link copied. Share the surprise when you are ready!')}catch(e){showToast('Copy the page URL from your browser to share it.')}}
+</script>
+</body>
+</html>
